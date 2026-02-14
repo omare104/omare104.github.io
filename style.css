@@ -5,6 +5,7 @@ body {
   color: #333;
 }
 
+/* NAVBAR */
 .navbar {
   position: fixed;
   top: 0;
@@ -19,37 +20,50 @@ body {
 }
 
 .navbar ul {
-  list-style: none;
   display: flex;
+  list-style: none;
   gap: 20px;
 }
 
-.navbar li {
+.nav-link {
   cursor: pointer;
   font-weight: bold;
   color: #2563eb;
 }
 
-main {
-  padding-top: 100px;
+.nav-link.active {
+  border-bottom: 3px solid #2563eb;
 }
 
+.theme-toggle {
+  border: none;
+  background: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+main {
+  padding-top: 120px;
+}
+
+/* SECTIONS */
 .section {
   max-width: 900px;
   margin: auto;
   padding: 40px 20px;
   display: none;
   opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.4s ease;
+  transform: translateX(40px);
+  transition: all 0.5s ease;
 }
 
 .section.active {
   display: block;
   opacity: 1;
-  transform: translateY(0);
+  transform: translateX(0);
 }
 
+/* HERO */
 .profile-img {
   width: 160px;
   border-radius: 50%;
@@ -57,18 +71,68 @@ main {
   margin: 0 auto 20px;
 }
 
+.tagline {
+  text-align: center;
+}
+
+/* BUTTONS */
 .btn {
   background: #2563eb;
   color: #fff;
   padding: 12px 24px;
-  border: none;
   border-radius: 6px;
-  cursor: pointer;
+  text-decoration: none;
+  margin-right: 10px;
 }
 
-.card {
-  background: #ffffff;
-  padding: 20px;
-  border-radius: 8px;
-  margin-bottom: 15px;
+.outline {
+  background: transparent;
+  border: 2px solid #2563eb;
+  color: #2563eb;
+}
+
+.whatsapp {
+  background: #16a34a;
+}
+
+/* PROJECTS */
+.project-card {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.3s;
+  border-radius: 10px;
+}
+
+.project-card:hover .overlay {
+  opacity: 1;
+}
+
+/* DARK MODE */
+body.dark {
+  background: #0f172a;
+  color: #e5e7eb;
+}
+
+body.dark .navbar {
+  background: #020617;
+}
+
+body.dark .section {
+  background: #020617;
 }
