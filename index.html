@@ -8,95 +8,115 @@
 </head>
 <body>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <img src="profile.jpg" alt="Omar Eissa" class="profile-img">
-    <h1>Omar Eissa Wahdan</h1>
-    <h2>Data Analyst | Power BI Specialist</h2>
-    <p>
-      Turning raw data into clear, decision-ready insights using Power BI, DAX, and SQL.
-    </p>
-    <p class="open">
-      Open to internships and junior data analyst roles.
-    </p>
-    <a href="#contact" class="btn">Let’s Work Together</a>
-  </section>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="logo">Omar Eissa</div>
+    <ul>
+      <li onclick="showSection('home')">Home</li>
+      <li onclick="showSection('about')">About</li>
+      <li onclick="showSection('skills')">Skills</li>
+      <li onclick="showSection('projects')">Projects</li>
+      <li onclick="showSection('services')">Services</li>
+      <li onclick="showSection('contact')">Contact</li>
+    </ul>
+  </nav>
 
-  <!-- About Section -->
-  <section class="section" id="about">
-    <h3>About Me</h3>
-    <p>
-      I am a Data Analyst and Power BI Specialist trained through DEPI’s professional track,
-      currently a second-year student at El Shorouk Academy.
-      I have hands-on experience transforming raw and scattered data into structured,
-      meaningful insights that support business decision-making.
-    </p>
-    <p>
-      My work focuses on data cleaning, modeling, and advanced DAX to design dashboards
-      that track KPIs, reveal trends, and translate data into clear, actionable business stories.
-    </p>
-  </section>
+  <!-- Sections -->
+  <main>
 
-  <!-- Projects Section -->
-  <section class="section" id="projects">
-    <h3>Projects</h3>
-
-    <div class="project">
-      <h4>Sales Performance Analysis Dashboard (Power BI)</h4>
-      <p>
-        Designed an end-to-end Power BI solution to help management monitor sales performance,
-        identify trends, and support data-driven planning.
+    <!-- Home -->
+    <section id="home" class="section active">
+      <img src="profile.jpg" class="profile-img">
+      <h1>Omar Eissa Wahdan</h1>
+      <h2>Data Analyst | Power BI Specialist</h2>
+      <p class="tagline">
+        Turning Data into Insights | Dashboards | Business Intelligence
       </p>
-      <ul>
-        <li>Built optimized data models and KPIs</li>
-        <li>Analyzed sales trends across time and products</li>
-        <li>Provided a single source of truth for decision-makers</li>
-      </ul>
-    </div>
-
-    <div class="project">
-      <h4>Employee & Sales Contribution Analysis (Power BI)</h4>
-      <p>
-        Analyzed employee performance and sales contribution by employment type and region
-        to improve transparency and resource allocation.
+      <p class="open">
+        Open to internships and junior data analyst roles.
       </p>
-      <ul>
-        <li>Compared full-time, contract, and hourly contributions</li>
-        <li>Identified high-impact employees and regions</li>
-        <li>Supported fair performance evaluation</li>
-      </ul>
-    </div>
+      <button onclick="showSection('contact')" class="btn">
+        Let’s Work Together
+      </button>
+    </section>
 
-    <div class="project">
-      <h4>Sales Analysis Dashboard (Excel)</h4>
+    <!-- About -->
+    <section id="about" class="section">
+      <h3>About Me</h3>
       <p>
-        Built an Excel-based dashboard using pivot tables and slicers
-        to provide quick and accessible sales insights.
+        I am a Data Analyst and Power BI Specialist trained through DEPI’s professional track,
+        currently a second-year student at El Shorouk Academy.
       </p>
+      <p>
+        I specialize in transforming raw and scattered data into structured,
+        meaningful insights through data cleaning, modeling, and advanced DAX.
+      </p>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section">
+      <h3>Skills</h3>
       <ul>
-        <li>Product and zone contribution analysis</li>
-        <li>Monthly sales trend tracking</li>
-        <li>Business-friendly Excel reporting</li>
+        <li><strong>Technical:</strong> Power BI, DAX, Power Query, SQL, Excel</li>
+        <li><strong>Business:</strong> KPI Design, Dashboard Storytelling, Data Analysis</li>
+        <li><strong>Soft Skills:</strong> Problem Solving, Communication, Attention to Detail</li>
       </ul>
-    </div>
-  </section>
+    </section>
 
-  <!-- Contact Section -->
-  <section class="section contact" id="contact">
-    <h3>Contact</h3>
-    <p>
-      I am open to internships, junior data analyst roles, and freelance opportunities.
-    </p>
-    <p>
-      📧 Email: <a href="mailto:omareissawahdan@gmail.com">omareissawahdan@gmail.com</a>
-    </p>
-    <p>
-      🔗 LinkedIn:
-      <a href="https://www.linkedin.com/in/omar3issawa7dan" target="_blank">
-        linkedin.com/in/omar3issawa7dan
-      </a>
-    </p>
-  </section>
+    <!-- Projects -->
+    <section id="projects" class="section">
+      <h3>Projects</h3>
 
+      <div class="card">
+        <h4>Sales Performance Analysis (Power BI)</h4>
+        <p>
+          Built an end-to-end Power BI dashboard to monitor sales performance,
+          analyze trends, and support decision-making.
+        </p>
+      </div>
+
+      <div class="card">
+        <h4>Employee & Sales Contribution Analysis</h4>
+        <p>
+          Analyzed employee and regional contributions to improve transparency
+          and performance evaluation.
+        </p>
+      </div>
+
+      <div class="card">
+        <h4>Sales Analysis Dashboard (Excel)</h4>
+        <p>
+          Created a pivot-based Excel dashboard for quick and accessible sales insights.
+        </p>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="section">
+      <h3>Offered Services</h3>
+      <ul>
+        <li>Power BI Dashboard Development</li>
+        <li>Data Modeling & DAX</li>
+        <li>Report Automation</li>
+        <li>Data Cleaning & Transformation</li>
+      </ul>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <h3>Contact</h3>
+      <p>Let’s turn your data into insights.</p>
+      <p>Email: <a href="mailto:omareissawahdan@gmail.com">omareissawahdan@gmail.com</a></p>
+      <p>
+        LinkedIn:
+        <a href="https://www.linkedin.com/in/omar3issawa7dan" target="_blank">
+          linkedin.com/in/omar3issawa7dan
+        </a>
+      </p>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
