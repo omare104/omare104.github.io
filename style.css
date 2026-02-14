@@ -6,20 +6,23 @@ body {
   scroll-behavior: smooth;
 }
 
+/* NAVBAR */
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
-  background: #fff;
+  background: #ffffff;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 15px 40px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  z-index: 1000;
 }
 
 .navbar ul {
-  list-style: none;
   display: flex;
+  list-style: none;
   gap: 20px;
 }
 
@@ -29,13 +32,25 @@ body {
   font-weight: bold;
 }
 
+.nav-link.active {
+  border-bottom: 3px solid #2563eb;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* SECTIONS */
 .section {
   max-width: 900px;
   margin: auto;
   padding: 120px 20px 60px;
   opacity: 0;
-  transform: translateY(30px);
-  transition: 0.6s;
+  transform: translateY(40px);
+  transition: all 0.6s ease;
 }
 
 .section.show {
@@ -50,25 +65,34 @@ body {
 .profile-img {
   width: 160px;
   border-radius: 50%;
+  margin-bottom: 20px;
 }
 
+/* BUTTONS */
 .btn {
   display: inline-block;
-  margin: 10px;
-  padding: 12px 24px;
   background: #2563eb;
   color: #fff;
-  text-decoration: none;
+  padding: 12px 24px;
   border-radius: 6px;
+  text-decoration: none;
+  margin-top: 15px;
 }
 
 .whatsapp {
   background: #16a34a;
 }
 
+.contact-buttons {
+  margin: 20px 0;
+  display: flex;
+  gap: 15px;
+}
+
+/* PROJECTS */
 .project-card {
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .project-card img {
@@ -79,20 +103,23 @@ body {
 .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0,0,0,0.65);
   color: #fff;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  text-align: center;
   opacity: 0;
   transition: 0.3s;
   border-radius: 10px;
+  padding: 20px;
 }
 
 .project-card:hover .overlay {
   opacity: 1;
 }
 
+/* DARK MODE */
 body.dark {
   background: #0f172a;
   color: #e5e7eb;
@@ -100,4 +127,8 @@ body.dark {
 
 body.dark .navbar {
   background: #020617;
+}
+
+body.dark a {
+  color: #38bdf8;
 }
