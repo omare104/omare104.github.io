@@ -1,3 +1,4 @@
+/* Base */
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -6,7 +7,7 @@ body {
   scroll-behavior: smooth;
 }
 
-/* NAVBAR */
+/* Navbar */
 .navbar {
   position: fixed;
   top: 0;
@@ -21,8 +22,8 @@ body {
 }
 
 .navbar ul {
-  display: flex;
   list-style: none;
+  display: flex;
   gap: 20px;
 }
 
@@ -43,21 +44,23 @@ body {
   cursor: pointer;
 }
 
-/* SECTIONS */
+/* Sections */
 .section {
   max-width: 900px;
   margin: auto;
-  padding: 120px 20px 60px;
+  padding: 120px 20px 80px; /* زوّدنا padding تحت */
   opacity: 0;
   transform: translateY(40px);
-  transition: all 0.6s ease;
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
+/* visible state */
 .section.show {
   opacity: 1;
   transform: translateY(0);
 }
 
+/* Hero */
 .hero {
   text-align: center;
 }
@@ -68,7 +71,7 @@ body {
   margin-bottom: 20px;
 }
 
-/* BUTTONS */
+/* Buttons */
 .btn {
   display: inline-block;
   background: #2563eb;
@@ -84,51 +87,11 @@ body {
 }
 
 .contact-buttons {
-  margin: 20px 0;
   display: flex;
   gap: 15px;
+  margin: 20px 0;
 }
 
-/* PROJECTS */
+/* Projects */
 .project-card {
-  position: relative;
-  margin-bottom: 30px;
-}
-
-.project-card img {
-  width: 100%;
-  border-radius: 10px;
-}
-
-.overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.65);
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  opacity: 0;
-  transition: 0.3s;
-  border-radius: 10px;
-  padding: 20px;
-}
-
-.project-card:hover .overlay {
-  opacity: 1;
-}
-
-/* DARK MODE */
-body.dark {
-  background: #0f172a;
-  color: #e5e7eb;
-}
-
-body.dark .navbar {
-  background: #020617;
-}
-
-body.dark a {
-  color: #38bdf8;
-}
+  position: relativ
