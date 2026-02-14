@@ -1,9 +1,9 @@
 const sections = document.querySelectorAll(".section");
 const navLinks = document.querySelectorAll(".nav-link");
 
-/* Animation on view */
+/* Show sections when they enter viewport */
 const observer = new IntersectionObserver(
-  entries => {
+  (entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add("show");
@@ -17,13 +17,14 @@ const observer = new IntersectionObserver(
     });
   },
   {
-    threshold: 0.25
+    threshold: 0.2 /* مهم عشان Contact تظهر */
   }
 );
 
+/* Observe all sections */
 sections.forEach(section => observer.observe(section));
 
-/* Dark Mode */
+/* Dark / Light mode */
 function toggleTheme() {
   document.body.classList.toggle("dark");
 }
