@@ -1,15 +1,15 @@
-function showSection(id) {
-  const sections = document.querySelectorAll('.section');
-  sections.forEach(section => {
-    section.classList.remove('active');
-  });
+function showSection(id, element) {
+  document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
 
-  setTimeout(() => {
-    document.getElementById(id).classList.add('active');
-  }, 150);
+  document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
+  element.classList.add('active');
 }
 
-// default section
-document.addEventListener("DOMContentLoaded", function () {
-  showSection("home");
+function toggleTheme() {
+  document.body.classList.toggle('dark');
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelector(".nav-link").click();
 });
