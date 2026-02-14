@@ -1,15 +1,17 @@
-function showSection(id, element) {
-  document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
+const sections = document.querySelectorAll(".section");
 
-  document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
-  element.classList.add('active');
-}
+window.addEventListener("scroll", () => {
+  sections.forEach(section => {
+    const top = window.scrollY;
+    const offset = section.offsetTop - 200;
+    const height = section.offsetHeight;
+
+    if (top >= offset && top < offset + height) {
+      section.classList.add("show");
+    }
+  });
+});
 
 function toggleTheme() {
-  document.body.classList.toggle('dark');
+  document.body.classList.toggle("dark");
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-  document.querySelector(".nav-link").click();
-});
