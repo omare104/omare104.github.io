@@ -6,5 +6,10 @@ function showSection(id) {
 
   setTimeout(() => {
     document.getElementById(id).classList.add('active');
-  }, 100);
+  }, 150);
 }
+
+// default section
+document.addEventListener("DOMContentLoaded", function () {
+  showSection("home");
+});
